@@ -37,7 +37,8 @@ def main():
     plt.ion()
     handles = []
     for n in range(5):
-        handles.append(plt.plot([], [], label='target %d' % n))
+        h = plt.plot([], [], label='target %d' % n)
+        handles.append(h[0])
 
     while True:
         wlbt.Trigger()  # initiates a scan and records signals
