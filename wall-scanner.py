@@ -60,7 +60,7 @@ def main():
             handles[n].set_ydata(t.yPosCm)
             handles[n].set_marker('o')
             handles[n].set_color('k')
-            handles[n].set_markersize(t.amplitude)
+            handles[n].set_markersize(5 + t.amplitude)
 
         plt.xlim(-150, 150)
         plt.ylim(-150, 150)
