@@ -26,7 +26,7 @@ def Init(libPath = _defaultLibPath):
     if not exists(libPath):
         raise ValueError('Could not load Walabot library at:', libPath)
     global _wlbt
-    _wlbt = CDLL(libPath)
+    _wlbt = CDLL(str(libPath))
 
 def IsInitialized():
     return _wlbt is not None
