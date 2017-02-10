@@ -1,0 +1,68 @@
+https://github.com/Walabot-Projects
+
+* api
+wlbt = Walabot(
+wlbt.GetAdvancedParameter(
+wlbt.GetDynamicImageFilter(
+wlbt.GetImagingTargets(
+wlbt.GetSensorTargets(
+wlbt.GetStatus(
+wlbt.GetThreshold(
+wlbt.Walabot_GetImagingTargets(
+wlbt.connect(
+wlbt.getArenaParams(
+wlbt.getClosestTarget(
+wlbt.getFps(
+wlbt.getParameters(
+wlbt.getRawImageSliceDimensions(
+wlbt.getStatusString(
+wlbt.getTargets(
+wlbt.get_targets(
+wlbt.isConnected(
+wlbt.isTargets(
+wlbt.setParameters(
+wlbt.setParametersAndStart(
+wlbt.setParams(
+wlbt.start(
+wlbt.stopAndDisconnect(
+wlbt.triggerAndGetRawImageSlice(
+wlbt.SetThreshold(
+
+** core data stuff
+wlbt.GetRawImage  - full 3d reflection response
+wlbt.GetRawImageSlice - 2d projection of response
+  - two different profiles:
+    - "sensor" - phi-R plane projection (distance scanning)
+    - "sensor narrow" (lower res, faster capture)
+    - "short-range" - X-Y plane projection (penetrating for through-wall)
+
+wlbt.GetSignal - raw image data from antenna - accepts elements from wlbt.GetAntennaPairs (Tx and Rx)
+wlbt.GetImageEnergy - total energy
+wlbt.GetImagingTargets - get targets in short-range mode (only one target?)
+wlbt.GetSensorTargets - get targets in sensor mode
+wlbt.SetDynamicImageFilter - filter out static signals
+
+
+
+** calibration
+wlbt.StartCalibration(
+wlbt.Calibrate(
+wlbt.CancelCalibration(
+
+
+** control the viewport?
+wlbt.{Set,Get}Arena{X,Y,Z,R,Phi,Theta}(
+- use XYZ for short-range triggered scan
+- use RThPh for sensor triggered scan
+
+** minimal setup functions
+wlbt.Init(
+wlbt.SetSettingsFolder(
+wlbt.Connect(
+wlbt.ConnectAny(
+wlbt.SetProfile(
+wlbt.SetDynamicImageFilter(
+wlbt.Start(
+wlbt.Trigger(
+wlbt.Stop(
+wlbt.Disconnect(
